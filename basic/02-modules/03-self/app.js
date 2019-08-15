@@ -1,3 +1,3 @@
-const Name = require('./name')
+const Name = require('./name.js')
 
-console.log(Name.sayName())
+console.log(Name.Name.sayName())

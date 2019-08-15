@@ -1,1 +1,13 @@
 nodemon: node的进程管理工具
+
+lodash: 4.11.2
+4: major
+11: minor
+2: patch
+
+^4.11.2: ^ 表示锁定主版本major
+~4.11.2: ~ 表示锁定次版本minor
+*: * 表示最新版本
+
+postman
+insomnia

@@ -1,8 +1,11 @@
+const _name = 'junhao'
+
 const Name = {
-  name: 'junhao',
+  name: _name,
   sayName() {
     return this.name
   }
 }
 
-module.exports = Name
+exports.Name = Name
+exports._name = _name
