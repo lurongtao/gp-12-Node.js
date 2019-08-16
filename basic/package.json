@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "http-proxy-middleware": "^0.19.1",
     "lodash": "^4.17.15",
     "request": "^2.88.0"
   }
