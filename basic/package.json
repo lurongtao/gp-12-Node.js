@@ -2,6 +2,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
+    "ejs": "^2.6.2",
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.19.1",
     "lodash": "^4.17.15",
