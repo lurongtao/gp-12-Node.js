@@ -1,0 +1,42 @@
+一、插入数据
+db.course.insertOne({name: 'HTML+CSS', startDate: '2019-05-27', teacher: '马晓鑫'})
+db.course.find()
+
+db.course.insertMany([
+  {name: 'JavaScript', startDate: '2019-06-10', teacher: '杨怀智'},
+  {name: 'PC端全栈开发', startDate: '2019-07-10', teacher: '杨怀智'}
+])
+db.course.find()
+
+db.course.insert(
+  {name: 'HTML5+CSS3', startDate: '2019-07-10', teacher: '陆荣涛'}
+)
+db.course.find()
+
+db.course.save(
+  {name: 'M站开发', startDate: '2019-07-17', teacher: '陆荣涛'}
+)
+
+二、修改
+db.course.update({name: "JavaScript"}, {
+  $set: { name: 'JavaScript高级程序设计' }
+})
+db.course.find()
+
+三、删除
+db.course.remove({name: 'M站开发'})
+db.course.find()
+
+四、查找
+db.movies.find()
+db.movies.find({}, {title: 1, _id: 0})
+db.movies.find({}, {title: 1, year: 1, _id: 0})
+db.movies.find({year: { $lt: '2000' }}, { title: 1, year: 1, _id: 0 })
+db.movies.find({}, {title: 1, year: 1, _id: 0}).sort({ year: 1 })
+db.movies.find({}, {title: 1, year: 1, _id: 0}).sort({ year: -1 })
+db.movies.find({}, {title: 1, year: 1, _id: 0}).sort({ year: -1 }).skip(10).limit(10)
+db.movies.find({}, {title: 1, year: 1, _id: 0}).skip(10).limit(10).sort({ year: -1 })
+db.movies.find({}, {title: 1, year: 1, _id: 0}).limit(10).skip(10).sort({ year: -1 })
+db.movies.find({title: '美丽人生'}, {title: 1, year: 1, _id: 0})
+db.movies.find({title: '人'}, {title: 1, year: 1, _id: 0})
+db.movies.find({title: /人/}, {title: 1, year: 1, _id: 0}).count()
