@@ -11,3 +11,11 @@ lodash: 4.11.2
 
 postman
 insomnia
+
+
+生成私钥：
+> openssl
+openssl > genrsa -out rsa_private_key.pem 2048
+
+生成公钥：
+openssl > rsa -in private.key -pubout -out public.pem
